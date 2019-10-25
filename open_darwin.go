@@ -2,8 +2,6 @@ package open
 
 import "os/exec"
 
-func openBrowser(url string) error {
-	return runCmd("open", url)
+func open(input string) error {
+	return exec.Command("open", input).Run()
 }
-
-func setFlags(cmd *exec.Cmd) {}
